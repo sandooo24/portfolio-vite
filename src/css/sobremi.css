@@ -1,0 +1,74 @@
+/*
+	SOBRE MI
+*/
+.about{
+	color: #f3f3f3;
+	padding: 0 1rem;
+}
+
+/*
+	HABILIDADES
+*/
+
+.skills{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem 1rem;
+	padding: .5rem;
+}
+
+.skills-item{
+	width: 47%;
+	background-color: rgb(25, 27, 32);
+	border-radius: 10px;
+	/* padding: .5rem; */
+	box-shadow: 0px 0px 10px 0px rgb(255,255,255,0.5);
+}
+
+.skills-item-color{
+	box-shadow: 0px 0px 10px 0px rgb(0,188,212,0.5);
+}
+
+.skills-item h3{
+	text-align: center;
+	font-size: 1.4rem;
+	color: #8cb9ed;
+}
+
+.lenguajes{
+	display: flex;
+	align-items: center;
+	gap: 1.4rem;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	padding: 20px;
+}
+
+.lenguajes div{
+	text-align: center;
+}
+
+
+.lenguajes img{
+	height: 50px;
+	width: 50px;
+}
+
+.lenguajes div h4{
+	color: #fff
+}
+
+@media(max-width: 500px){
+	.btn-cv{
+		padding: .5rem .2rem;
+		width: 40%;
+	}
+
+	.skills-item{
+		width: 100%;
+	}
+
+	.lenguajes img{
+		width: 50px;
+	}
+}

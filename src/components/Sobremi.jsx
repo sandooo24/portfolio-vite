@@ -6,9 +6,11 @@ export default function Sobremi() {
         <section>
             <h2>Sobre Mi</h2>
             <div className="about">
-                Tengo 18 años soy Desarrolador Web, realizo mis estudios en la escuela E.E.S.T.Nº3. Me gusta mucho aprender tecnologias nuevas y asi poder mejorar mis habilidades.
-                <p></p>
-                <a className="btn">
+                <p>
+                Tengo 19 años soy desarrollador web tanto de frontend como backend, arranque con esto hace 3 años en la E.E.S.T.Nª3. Me gusta mucho aprender tecnologias nuevas tanto de front y back para asi poder mejorar mis habilidades.
+                </p>
+                <a className="btn btn-cv">
+                    <img src="../../public/icon/pdf.svg" />
                     Ver CV
                 </a>
             </div>	
@@ -76,10 +78,6 @@ export default function Sobremi() {
                 <div className="skills-item skills-item-color">
                     <h3>Aprendiendo</h3>
                     <div className="lenguajes">
-                        <div>
-                            <img src="../../public/icon/python.svg"/>
-                            <h4>Python</h4>
-                        </div>
                         <div>
                             <img src="../../public/icon/react.svg"/>
                             <h4>React</h4>

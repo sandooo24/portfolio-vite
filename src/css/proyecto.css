@@ -1,6 +1,3 @@
-/*
-	PROYECTOS
-*/
 .proyectos{
 	display: flex;
 	flex-wrap: wrap;
@@ -9,64 +6,162 @@
 }
 
 .proyecto{
-	width: 46%;
-	/*height: 300px;*/
+	position: relative;
+	width: calc(50% - 1rem);
 	background-color: rgb(25, 27, 32);
-	border-radius: 10px;
-	overflow: hidden;
-	cursor: default;
+	padding: 1rem;
+	border-radius: 5px;
 }
 
-.proyecto:hover{
-	box-shadow: 0px 0px 20px 0px rgb(0,188,212,0.5);
-	/* width: 47%; */
+@property --angle{
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
 }
 
-.proyecto img{
+.proyecto:after{
+	/*--angle: 0deg;*/
+	content: '';
+	position: absolute;
+	z-index: -1;
+	border-radius: 5px;
+	top: -2px;
+	left: -2px;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	background-image: conic-gradient(from var(--angle),transparent,#8cb9ed);
+	animation: 5s spin linear infinite;
+}
+
+@keyframes spin{
+	from{
+		--angle: 0deg;
+	}
+	to{
+		--angle: 360deg;
+	}
+}
+
+.proyecto p{
+	font-size: .9rem;
+	color: #f1f1f1;
+}
+
+.proyecto h3{
+	color: #8cb9ed;
+	margin-bottom: .5rem
+}
+
+.proyecto-imgs, .proyecto-imgs-una,.splide{
+	margin: .5rem 0;
+	border-radius:5px;
 	width: 100%;
-	height: 150px;
+	overflow: hidden;
+
 }
 
-.proyecto-content{
-	padding: .1rem 1rem;
-} 
+.proyecto-imgs ul{
+	padding: 0;
+	display: flex;
+	width: 400%;
 
-.proyecto-content h4{
-	color: #ffcc00;
-	margin: 5px 0
+	animation: slide 16s infinite ease-in-out
 }
 
-.proyecto-content p{
-	font-size: .8rem;
-	color: #fff;
+.proyecto-imgs li{
+	width: 100%;
+	list-style: none;
 }
 
-.proyecto-lenguajes{
+.proyecto-imgs img, .proyecto-imgs-una img{
+    aspect-ratio: 16/9;
+	width: 100%;
+	height: 100%;
+}
+
+@keyframes slide{
+	0%{ margin-left: 0% }
+	20%{ margin-left: 0% }
+
+	25%{ margin-left: -100% }
+	45%{ margin-left: -100% }	
+
+	50%{ margin-left: -200% }
+	70%{ margin-left: -200% }
+
+	75%{ margin-left: -300% }
+	95%{ margin-left: -300% }
+}
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
+}
+.splide:not(.is-overflow) .splide__pagination{
+	display: flex;
+}
+/* BTN VISITAR PAGINA */
+.proyecto-links{
+	display: flex;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	gap:1px;
+}
+
+.proyecto-link{
+	display: flex;
+/*	position: absolute;
+	top: 1rem;
+	right: 1rem;*/
+	padding: 5px;
+	border-radius: 50%;
+	/*background-color: #000;*/
+	transition: all .3s ease-in-out
+}
+
+.proyecto-link img{
+	width: 24px;
+	filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7494%) hue-rotate(203deg) brightness(100%) contrast(102%);
+}
+
+.proyecto-link:hover{
+	background-color: #000;
+}
+
+.proyecto-tools{
 	display: flex;
 	align-items: center;
-	gap:1rem;
-	margin: 10px 0;
+	gap: 1rem;
+	justify-content: center;
 }
 
-.proyecto-lenguajes img{
-	width: 20px;
-	height: 20px
+.proyecto-tools img{
+    aspect-ratio: 9/9;
+	width: 24px;
+}
+
+/* LOGISTRUCK */
+.logistruck:after{
+	background-image: conic-gradient(from var(--angle),transparent,#259073);
+}
+
+.logistruck h3{
+	color: #259073;
+}
+
+/* RAPIDASH */
+.rapidash h3{
+	color: #970D0D;
+}
+
+.rapidash:after{
+	background-image: conic-gradient(from var(--angle),transparent,#970D0D);
 }
 
 @media(max-width: 500px){
 	.proyecto{
 		width: 100%;
-	}
-	
-	.proyecto img{
-		height: 190px;
-	}
-
-	.proyecto-content p{
-		font-size: 1rem;
-	}
-	
-	.proyecto-lenguajes{
-		height: 20px;
+		height: auto;
 	}
 }

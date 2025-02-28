@@ -37,7 +37,7 @@ export default function Contacto() {
                     </div>
                     <div>
                         <img src="../../public/icon/mail.svg" width="25"/>
-                        <a >facundosandoval376@gmail.com</a>
+                        <a href="mailto:facundosandoval376@gmail.com">facundosandoval376@gmail.com</a>
                     </div>
                 </div>
             </div>	

@@ -1,8 +1,21 @@
-# React + Vite
+## Instalación
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En la carpeta raíz de tu proyecto, ejecuta el siguiente comando para instalar todas las dependencias del proyecto:
+```bash
+npm install
+```
 
-Currently, two official plugins are available:
+Luego instala **React Router**:
+```bash
+npm install react-router-dom@6
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Luego instala **Splide**:
+```bash
+npm install @splidejs/react-splide
+```
+
+Una vez hecho esto, puedes ejecutar el siguiente comando para correr el proyecto completo:
+```bash
+npm run dev
+```

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+
 :root {
   font-family: Titillium Web, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -18,18 +23,31 @@
 body {
   margin: 0;  
 }
+body::-webkit-scrollbar {
+    width: 8px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(13, 14, 17);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #1022415c;    /* color of the scroll thumb */
+}
 
 hr{
 	margin: 0 auto;
 	width: 50%;
+	max-width: 700px;
 	box-shadow: 0px 0px 10px 0px rgb(0,188,212,0.5);
 }
 
 section{
-  padding: 1rem;
-  width: 50%;
-  margin: 0 auto;
-  margin-bottom: 1rem;
+	width: 60%;
+	max-width: 800px;
+	margin: 2rem auto;
+	padding: .5rem;
+	position: relative;
 }
 
 section h2{
@@ -203,9 +221,9 @@ footer{
 	text-align: center;
 	padding: 2rem;
 }
-@media(max-width: 1000px) {
+@media(max-width: 1024px) {
   section{
-    width: auto;
+    width: 70%;
   }
 }
 
@@ -224,7 +242,7 @@ footer{
 		position: absolute;
 	    top: 4.3em;
 	    right: 0;
-	    width: 93%;
+	    width: 100%;
 	    display: flex;
 	    /* display: none; */
 	    margin: 0;

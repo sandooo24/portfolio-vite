@@ -6,6 +6,15 @@
 	padding: 0 1rem;
 }
 
+.btn-cv{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	width: 30%;
+	padding: .5rem 0;
+	margin-top: 2rem;
+}
 /*
 	HABILIDADES
 */
@@ -18,10 +27,10 @@
 }
 
 .skills-item{
-	width: 47%;
+	width: calc(50% - .5rem);
 	background-color: rgb(25, 27, 32);
 	border-radius: 10px;
-	/* padding: .5rem; */
+	padding: .5rem;
 	box-shadow: 0px 0px 10px 0px rgb(255,255,255,0.5);
 }
 

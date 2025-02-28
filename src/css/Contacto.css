@@ -10,7 +10,7 @@
 }
 
 .contacto form{
-	width: 46%;
+	width: calc(50% - 1rem);
 }
 
 .contacto form label{

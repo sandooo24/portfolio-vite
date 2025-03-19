@@ -1,0 +1,29 @@
+/*
+	SOBRE MI
+*/
+.about{
+	color: #f3f3f3;
+	padding: 0 1rem;
+}
+
+.about p{
+	padding: 0;
+}
+
+.btnCv{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	width: 30%;
+	padding: .5rem 0;
+	margin-top: 2rem;
+}
+
+@media(max-width: 500px){
+	.btnCv{
+		padding: .5rem .2rem;
+		width: 40%;
+	}
+
+}

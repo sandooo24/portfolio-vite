@@ -1,11 +1,11 @@
-.proyectos{
+.projects{
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2rem;
 	padding: .5rem;
 }
 
-.proyecto{
+.cardProject{
 	position: relative;
 	width: calc(50% - 1rem);
 	background-color: rgb(25, 27, 32);
@@ -19,7 +19,7 @@
 	inherits: false;
 }
 
-.proyecto:after{
+.cardProject:after{
 	/*--angle: 0deg;*/
 	content: '';
 	position: absolute;
@@ -29,7 +29,6 @@
 	left: -2px;
 	width: calc(100% + 4px);
 	height: calc(100% + 4px);
-	background-image: conic-gradient(from var(--angle),transparent,#8cb9ed);
 	animation: 5s spin linear infinite;
 }
 
@@ -42,66 +41,30 @@
 	}
 }
 
-.proyecto p{
+.rolProject{
+	display: block;
+	opacity: .5;
+	font-size: .8rem;
+	margin-bottom: .5rem
+}
+.cardProject p{
 	font-size: .9rem;
 	color: #f1f1f1;
 }
 
-.proyecto h3{
-	color: #8cb9ed;
-	margin-bottom: .5rem
-}
-
-.proyecto-imgs, .proyecto-imgs-una,.splide{
+.projectImg{
 	margin: .5rem 0;
 	border-radius:5px;
 	width: 100%;
 	overflow: hidden;
-
 }
-
-.proyecto-imgs ul{
-	padding: 0;
-	display: flex;
-	width: 400%;
-
-	animation: slide 16s infinite ease-in-out
-}
-
-.proyecto-imgs li{
-	width: 100%;
-	list-style: none;
-}
-
-.proyecto-imgs img, .proyecto-imgs-una img{
+.projectImg img{
     aspect-ratio: 16/9;
 	width: 100%;
 	height: 100%;
 }
 
-@keyframes slide{
-	0%{ margin-left: 0% }
-	20%{ margin-left: 0% }
-
-	25%{ margin-left: -100% }
-	45%{ margin-left: -100% }	
-
-	50%{ margin-left: -200% }
-	70%{ margin-left: -200% }
-
-	75%{ margin-left: -300% }
-	95%{ margin-left: -300% }
-}
-
-.splide__slide img {
-  width: 100%;
-  height: auto;
-}
-.splide:not(.is-overflow) .splide__pagination{
-	display: flex;
-}
-/* BTN VISITAR PAGINA */
-.proyecto-links{
+.projectLinks{
 	display: flex;
 	position: absolute;
 	top: 1rem;
@@ -109,7 +72,8 @@
 	gap:1px;
 }
 
-.proyecto-link{
+/* BTN VISITAR PAGINA */
+.linkProject{
 	display: flex;
 /*	position: absolute;
 	top: 1rem;
@@ -120,25 +84,56 @@
 	transition: all .3s ease-in-out
 }
 
-.proyecto-link img{
+.linkProject img{
 	width: 24px;
 	filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7494%) hue-rotate(203deg) brightness(100%) contrast(102%);
 }
 
-.proyecto-link:hover{
+.linkProject:hover{
 	background-color: #000;
 }
 
-.proyecto-tools{
+.projectTechnologies{
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	gap: 1rem;
 	justify-content: center;
 }
 
-.proyecto-tools img{
+.projectTechnologies span{
+	position: relative
+}
+
+.projectTechnologies span:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	border-radius: 5px;
+}
+
+.projectTechnologies img{
     aspect-ratio: 9/9;
 	width: 24px;
+}
+/* TECHNOLOGIES */
+.html:after{ background-color: #E34F26;}
+.javascript:after{ background-color: #F7DF1E;}
+.php:after{ background-color: #777BB4;}
+.css:after{ background-color: #1572B6;}
+.mysql:after{ background-color: #4479A1;}
+.api:after{ background-color: #cacaca;}
+
+/* DEFAULT */
+.default::after{
+	background-image: conic-gradient(from var(--angle),transparent,#8cb9ed);
+}
+
+.default h3{
+	color: #8cb9ed;
 }
 
 /* LOGISTRUCK */
@@ -160,8 +155,13 @@
 }
 
 @media(max-width: 500px){
-	.proyecto{
+	.cardProject{
 		width: 100%;
 		height: auto;
+	}
+
+	.rolProject{
+		font-size: .7rem;
+		margin: 0;
 	}
 }

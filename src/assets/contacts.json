@@ -1,0 +1,22 @@
+[
+    {
+        "contact": "Buenos Aires,Argentina",
+        "link": "",
+        "img": "icon/map.svg" 
+    },
+    {
+        "contact": "Facundo Sandoval",
+        "link": "https://ar.linkedin.in/facuSandoval",
+        "img": "icon/linkedin.svg" 
+    },    
+    {
+        "contact": "sandooo24",
+        "link": "https://github.com/sandooo24",
+        "img": "icon/github-light.svg" 
+    },
+    {
+        "contact": "facundosandoval376@gmail.com",
+        "link": "mailto:facundosandoval376@gmail.com",
+        "img": "icon/mail.svg" 
+    }
+]

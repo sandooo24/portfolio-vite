@@ -13,6 +13,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color:  rgb(13, 14, 17);
+  /* background: linear-gradient(180deg, rgba(13,14,17,1) 50%, #353945 95%, #3c4250 100%); */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,16 +23,23 @@
 
 body {
   margin: 0;  
+  overflow: hidden;
 }
-body::-webkit-scrollbar {
+
+main{
+  /* height: calc(100vh - 70px);  */
+  overflow-y: auto;
+}
+
+main::-webkit-scrollbar {
     width: 8px;               /* width of the entire scrollbar */
 }
 
-body::-webkit-scrollbar-track {
+main::-webkit-scrollbar-track {
     background: rgb(13, 14, 17);        /* color of the tracking area */
 }
 
-body::-webkit-scrollbar-thumb {
+main::-webkit-scrollbar-thumb {
     background-color: #1022415c;    /* color of the scroll thumb */
 }
 
@@ -42,86 +50,20 @@ hr{
 	box-shadow: 0px 0px 10px 0px rgb(0,188,212,0.5);
 }
 
+a,img{
+  user-select: none;
+}
+
 section{
 	width: 60%;
 	max-width: 800px;
-	margin: 2rem auto;
+	margin: 1rem auto;
 	padding: .5rem;
 	position: relative;
 }
 
 section h2{
 	color: #c2d8f5;
-}
-
-/**********************
-*
-*	HEADER
-*
-*******************/
-.navbar{
-	background-color: rgb(13, 14, 17, .9);
-	position: sticky;
-	z-index: 3;
-	top: 0;
-	left: 0;
-	padding: 1rem;
-	box-shadow: 0px 0px 10px 0px rgb(0,188,212,0.5);
-	display: flex;
-	justify-content: center;
-	align-items: baseline;
-}
-.navbar-logo{
-	user-select: none;
-	text-decoration: none;
-	cursor: default;
-}
-
-.navbar-logo h2, .navbar ul{
-  margin: 0;
-}
-
-.navbar-logo h2{
-	color: #c2d8f5;
-	font-style: italic;
-}
-
-.navbar ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
-}
-.navbar ul li a {
-    text-decoration: none;
-    color: #c2d8f5;
-    text-transform: capitalize;
-}
-
-.navbar ul li::after {
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #2877cf;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-}
-
-.navbar ul li:hover::after {
-    width: 100%;
-}
-
-.btn-menu{
-	background-color: transparent;
-	border: none;
-	outline: none;
-	display: none;
-}
-
-.btn-menu img{
-	filter: brightness(0) saturate(100%) invert(56%) sepia(48%) saturate(7018%) hue-rotate(195deg) brightness(86%) contrast(87%);
 }
 
 /**********************
@@ -134,8 +76,8 @@ section h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../../public/img/img.png);
+  height: calc(100vh - 70px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/img.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -209,60 +151,54 @@ section h2{
   /* color: #183762; */
   box-shadow: 0px 0px 10px 0px rgb(0, 188, 212, 0.5);
 }
-/***********************
-*
-*			FOOTER
-*
-**********************/
-footer{
-	background-color: rgb(11, 14,22, .9);
-	/*box-shadow: 0px 0px 10px 0px rgb(0,188,212,0.5);*/
-	color: #c2d8f5;
-	text-align: center;
-	padding: 2rem;
+
+/* 
+  SPLIDE
+*/
+.splide{
+	margin: .5rem 0;
+	border-radius:5px;
+	width: 100%;
+	overflow: hidden;
 }
+.splide__slide img {
+  width: 100%;
+  height: auto;
+}
+.splide:not(.is-overflow) .splide__pagination{
+	display: flex;
+}
+
+/* 
+  MARCA PAGE ACTIVA
+*/
+.active img{
+  filter: brightness(0) saturate(100%) invert(36%) sepia(91%) saturate(764%) hue-rotate(181deg) brightness(92%) contrast(91%);
+}
+
+.active::after{
+  content: '';
+  height: 3px;
+  width: 100%;
+  background: #2877cf;
+  position: absolute;
+  left: 0;
+  bottom: -10.5px;
+}
+
 @media(max-width: 1024px) {
   section{
     width: 70%;
   }
 }
 
+@media(max-width: 950px){
+  section{
+    width: 90%;
+  }
+}
+
 @media(max-width: 500px) {
-  .navbar{
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.navbar h2{
-		margin-left: 1rem;
-	}
-
-	.navbar ul{
-		overflow: hidden;
-		position: absolute;
-	    top: 4.3em;
-	    right: 0;
-	    width: 100%;
-	    display: flex;
-	    /* display: none; */
-	    margin: 0;
-	    background: rgb(13 14 17);
-	    box-shadow: -10px 0px 10px 0px rgb(0 188 212 / 50%);
-	    padding: 0;
-	    flex-direction: column;
-	    gap: 2rem;
-	    height: 0;
-	    transition: all .4s;
-	}
-
-  	.btn-menu{
-		display: block;
-	}
-	
-	.box-pre{
-		height: 50vh;
-	}
-	
 
 	.nombre p{
 		font-size: 2rem;
@@ -276,11 +212,4 @@ footer{
 		width: 90%;
 	}
 
-	section{
-		width: 90%;
-	}
-
-	footer{
-		font-size: .8rem
-	}
 }

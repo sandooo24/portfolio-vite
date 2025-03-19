@@ -1,0 +1,64 @@
+[
+    {   
+        "name": "Frontend",
+        "skills": [
+            {
+                "name": "HTML",
+                "img": "icon/html5.svg"
+            },
+            {
+                "name": "JavaScript",
+                "img": "icon/javascript.svg"
+            },
+            {
+                "name": "CSS",
+                "img": "icon/css.svg"
+            }
+        ]
+    },
+    {   
+        "name": "Backend",
+        "skills": [
+            {
+                "name": "PHP",
+                "img": "icon/php.svg"
+            },
+            {
+                "name": "MySQL",
+                "img": "icon/mysql.svg"
+            },
+            {
+                "name": "API",
+                "img": "icon/api.svg"
+            }
+        ],
+        "color": true
+    },
+    {   
+        "name": "Herramientas",
+        "skills": [
+            {
+                "name": "Git",
+                "img": "icon/git.svg"
+            },
+            {
+                "name": "BashScript",
+                "img": "icon/bash.svg"
+            },
+            {
+                "name": "Trello",
+                "img": "icon/trello.svg"
+            }
+        ],
+        "color": true 
+    },
+    {   
+        "name": "Aprendiendo",
+        "skills": [
+            {
+                "name": "React",
+                "img": "icon/react.svg"
+            }
+        ]
+    }
+]

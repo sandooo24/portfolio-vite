@@ -1,0 +1,33 @@
+/*
+	CONTACTO
+*/
+.contacto{
+	padding: 0.5rem;
+	display: flex;
+	/*justify-content: space-between;*/
+	gap:2rem;
+	flex-wrap: wrap;
+}
+
+.listContacts{
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin:1rem 0;
+}
+
+.cardContact{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.cardContact a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.cardContact img{
+	/*filter: brightness(0) saturate(100%) invert(86%) sepia(19%) saturate(779%) hue-rotate(183deg) brightness(98%) contrast(96%);*/
+	filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7500%) hue-rotate(268deg) brightness(101%) contrast(103%);
+}

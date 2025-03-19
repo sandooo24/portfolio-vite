@@ -1,0 +1,40 @@
+.form{
+	width: calc(50% - 1rem);
+}
+
+.form label{
+	color: #fff;
+}
+
+.form input, textarea{
+	width: 100%;
+	margin-bottom: 1rem;
+	margin-top: 10px;
+	outline: none;
+	background-color: rgb(25, 27, 32);
+	border:none;
+	padding: 5px;
+	color: #fff;
+}
+
+.form input:hover, textarea:hover{
+	transition: all .3s;
+	box-shadow: 0px 0px 10px 0px rgb(0,188,212,0.5);
+}
+
+.form input:focus,textarea:focus{
+	transition: all .3s;
+	box-shadow: 0px 0px 10px 0px rgb(0,188,212,0.5);
+}	
+
+.form textarea{
+	resize: vertical;
+	min-height: 100px;
+	max-height: 200px;
+}
+
+@media(max-width: 500px){
+	.form{
+		width: 100%;
+	}
+}

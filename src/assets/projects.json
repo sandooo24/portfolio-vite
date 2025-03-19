@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Logistruck",
+        "rols": [
+            "Backend Dev",
+            "Frontend Dev"
+        ],
+        "description": "Es una aplicación web destinada a la logística de empresas, con el fin de automatizar procesos y facilitar el trabajo tanto a las empresas como a sus empleados.",
+        "imgs": [
+            "img/logistruck.png",
+            "img/screen-1-logistruck.png",
+            "img/screen-2-logistruck.png",
+            "img/screen-3-logistruck.png"
+        ],
+        "technologies":[
+            "HTML",
+            "JavaScript",
+            "CSS",
+            "PHP",
+            "MySQL",
+            "API"
+        ],
+        "links": [
+            {   
+                "link": "https://logistruck.escuelarobertoarlt.com",
+                "icon": "icon/arrow-right-up.svg"
+            }
+        ],
+        "style": "logistruck"
+    },
+    {
+        "name": "Rapidash",
+        "rols":[
+            "Backend Dev",
+            "Frontend Dev"
+        ],
+        "description": "Es una página que permite administrar una empresa de comida rapida, como manejar varias sucursales desde la misma; registrar pedidos,modificarlos y cancelarlos.",
+        "imgs": [
+            "img/rapidash.png"
+        ],
+        "technologies":[
+            "HTML",
+            "JavaScript",
+            "CSS",
+            "PHP"
+        ],
+        "links": [
+            {   
+                "link": "https://github.com/7mo-3ra-G2-2024/sucursal",
+                "icon": "icon/github-light.svg"
+            }
+        ],
+        "style": "rapidash"
+    },
+    {
+        "name": "Buscador de Direcciones",
+        "rols":[
+            "FullStack Dev"
+        ],
+        "description": "Es una página web para buscar direcciones solamente de argentina hecho con la api Georef para las direcciones y leaflet js para mostrar el mapa.",
+        "imgs": [
+            "img/buscadordire.png"
+        ],
+        "technologies":[
+            "HTML",
+            "JavaScript",
+            "CSS",
+            "API"
+        ],
+        "links": [
+            {   
+                "link": "https://github.com/sandooo24/buscador-direcciones",
+                "icon": "icon/github-light.svg"
+            },
+            {
+                "link": "https://buscadorapigeoref.netlify.app/",
+                "icon": "icon/arrow-right-up.svg"
+            }
+        ],
+        "style": "default"
+    }
+]

@@ -3,7 +3,7 @@ import styles from './styles.module.css'
 
 export const FormContact = () => {
   return (
-    <form className={styles.form} method='post' name='portafolio'>
+    <form className={styles.form} name='portafolio' data-netlify="true">
         <input type='hidden' name='form-name' value='portafolio' />
         <label htmlFor="email">Tu email</label>
         <input type="text" id="email" name="destinatario" required />

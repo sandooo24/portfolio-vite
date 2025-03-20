@@ -28,9 +28,15 @@ const CardContact = ({data}) =>{
     return (
         <div className={styles.cardContact}>
             <img src={`${img}`} width="25"/>
-            <a href={link}>
-                {contact}
-            </a>
+            {link !== "" ? 
+                <a href={link}>
+                    {contact}
+                </a>
+            :
+                <a>
+                    {contact}
+                </a>
+            }
         </div>
     );
 }

@@ -27,7 +27,7 @@ body {
 }
 
 main{
-  /* height: calc(100vh - 70px);  */
+  height: calc(100vh - 70px); 
   overflow-y: auto;
 }
 
@@ -76,7 +76,7 @@ section h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 70px);
+  height: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/img.png);
   background-position: center;
   background-size: cover;
@@ -199,6 +199,9 @@ section h2{
 }
 
 @media(max-width: 500px) {
+  main{
+    height: calc(100vh - 100px);
+  }
 
 	.nombre p{
 		font-size: 2rem;
